@@ -7,6 +7,7 @@ const nextButton = document.getElementById('next-button');
 const pageNumber = document.getElementById('page-number');
 const limitSelect = document.getElementById('limit-select');
 
+// set default values
 let currentPage = 1;
 let limit = 10;
 let totalPhotos = 0;
@@ -54,15 +55,15 @@ async function fetchPhotos(page, limit) {
 function displayPhotos(photos) {
     photos.forEach(photo => {
         const photoItem = document.createElement('div');
+        // add style
         photoItem.classList.add('photo-item', 'fade-in');
 
+        //add photo to DOM
         const img = document.createElement('img');
         img.src = photo.thumbnailUrl;
         img.alt = photo.title;
-
         const title = document.createElement('p');
         title.textContent = photo.title;
-
         photoItem.appendChild(img);
         photoItem.appendChild(title);
         gallery.appendChild(photoItem);
