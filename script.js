@@ -21,7 +21,8 @@ async function fetchTotalPhotos() {
         const data = await response.json();
         totalPhotos = data.length;
     } catch (error) {
-        console.error('Error fetching total photos:', error);
+        console.error(error);
+        errorDiv.textContent = 'Error loading photos. Please try again later.';
     }
 }
 
