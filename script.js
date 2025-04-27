@@ -111,7 +111,6 @@ function handlePageChange() {
 }
 
 // Initialize app
-// Initialize app
 async function init() {
     await fetchTotalPhotos();
     handlePageChange();

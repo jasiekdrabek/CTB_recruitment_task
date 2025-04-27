@@ -35,7 +35,7 @@ h1 {
 /* Gallery grid */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, 150px);
   gap: 15px;
 }
 
@@ -45,7 +45,7 @@ h1 {
   padding: 10px;
   border-radius: 8px;
   text-align: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(5, 5, 5, 0.5);
 }
 
 /* Thumbnail images */
@@ -70,19 +70,62 @@ h1 {
   gap: 10px;
 }
 
+/* Button styling */
 button {
-  padding: 10px 15px;
-  font-size: 16px;
-  cursor: pointer;
+  padding: 16px 20px;
+  font-size: 1rem;
+  border-radius: 15px;
+  background-color: #e50914;
+  color: #fff;
   border: none;
-  background-color: #007bff;
-  color: white;
-  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #d64c53;
+  transform: scale(1.05);
 }
 
 button:disabled {
   background-color: #ccc;
   cursor: not-allowed;
+}
+
+span {
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+/* Select styling */
+select {
+  margin-top: 20px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  font-size: 1rem;
+  color: #333;
+  box-shadow: 0 2px 5px rgba(5, 5, 5, 0.5);
+  appearance: none; /* remove default arrow */
+  background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8"><path fill="black" d="M6 8L0 0h12z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 12px 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+select:hover {
+  border-color: #888;
+  box-shadow: 0 4px 8px rgba(5, 5, 5, 0.15);
+}
+
+select:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
 }
 
 /* Fade-in animation for photos */
