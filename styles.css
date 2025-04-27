@@ -41,6 +41,9 @@ h1 {
 
 /* Each photo item */
 .photo-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: #fff;
   padding: 10px;
   border-radius: 8px;
@@ -53,12 +56,14 @@ h1 {
   width: 100%;
   height: auto;
   border-radius: 4px;
+  object-fit: cover;
 }
 
 /* Photo title */
 .photo-item p {
-  margin-top: 10px;
-  font-size: 14px;
+  margin-top: 20px;
+  font-size: 1rem;
+  font-style: italic;
 }
 
 /* Pagination buttons */
