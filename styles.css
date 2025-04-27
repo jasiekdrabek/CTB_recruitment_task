@@ -59,6 +59,10 @@ h1 {
   object-fit: cover;
 }
 
+.photo-item:hover img {
+  transform: scale(1.1);
+}
+
 /* Photo title */
 .photo-item p {
   margin-top: 20px;
@@ -114,6 +118,7 @@ select {
   color: #333;
   box-shadow: 0 2px 5px rgba(5, 5, 5, 0.5);
   appearance: none; /* remove default arrow */
+  /* add and position new arrow */
   background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8"><path fill="black" d="M6 8L0 0h12z"/></svg>');
   background-repeat: no-repeat;
   background-position: right 12px center;
